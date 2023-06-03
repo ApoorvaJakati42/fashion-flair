@@ -54,7 +54,7 @@ export default function CheckoutPortal ({ user }) {
     console.log("25" + JSON.stringify(user));
     console.log("25 a " + JSON.stringify(user.subscriptions));
     console.log("25 b " + JSON.stringify(user.subscriptions.length));
-    const hasSubscriptionActive = user.subscriptions.length > 0 
+    const hasSubscriptionActive = user.subscriptions?.length > 0 
 
     const matchesMD = useMediaQuery(theme => theme.breakpoints.down("md"))
 

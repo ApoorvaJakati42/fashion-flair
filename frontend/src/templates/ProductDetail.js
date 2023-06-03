@@ -21,7 +21,10 @@ export default function ProductDetail({ pageContext : {name , id , category , de
 
     const matchesMD = useMediaQuery(theme => theme.breakpoints.down("md"))
 
-    const params = new URLSearchParams(window.location.search)
+    const params = typeof window !== "undefined" ? new URLSearchParams(window.location.search) : {get : () => null}
+
+    const recentlyViewedProducts = typeof window !== "undefined" ? 
+    JSON.parse(window.localStorage.getItem("recentlyViewed")) : null
     const style = params.get("style")
 
     //Here we are making apollo query to get the stock and rating
@@ -88,7 +91,7 @@ export default function ProductDetail({ pageContext : {name , id , category , de
                         product={id}/>
                     </Grid>
 
-                    <RecentlyViewed products={JSON.parse(window.localStorage.getItem("recentlyViewed"))}/>
+                    <RecentlyViewed products={recentlyViewedProducts}/>
 
                     <ProductReviews product={id} edit={edit} setEdit={setEdit}/>
                 </Grid>

@@ -96,14 +96,15 @@ export default function Header({ categories }) {
 
   const activeIndex = () => {
 
-    const pathname = typeof window !== "undefined" ? `/${window.location.pathname.split("/")[1]}` : "";  
+    const pathname = typeof window !== "undefined" ? 
+    window.location.pathname.split("/")[1] : null  
    
         const found = routes.indexOf(
           routes.filter(
             (
               {node: {name,link}}
             )=>
-            (link || `/${name.toLowerCase()}`) === pathname
+            (link || `/${name.toLowerCase()}`) === `/${pathname}`
           )[0]
         )
 
