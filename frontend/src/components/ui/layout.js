@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
         }  
   `)
 
-  console.log("Data of layout today " + JSON.stringify(data.allStrapiCategory.edges));
+  console.log("Data loaded from the strapi backend to the react component before rendering " + JSON.stringify(data.allStrapiCategory.edges));
 
 
   return (

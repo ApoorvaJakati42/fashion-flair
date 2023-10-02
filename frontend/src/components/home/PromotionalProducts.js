@@ -3,7 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import { Grid } from '@material-ui/core';
 import { Button } from '@material-ui/core';
 import { IconButton } from '@material-ui/core';
-import Carousel from 'react-spring-3d-carousel';
+//import Carousel from 'react-spring-3d-carousel';
 import clsx from 'clsx';
 import { makeStyles } from "@material-ui/core/styles"
 import {Link , useStaticQuery , graphql } from 'gatsby';
@@ -148,7 +148,7 @@ export default function PromotionalProducts() {
         classes={{root : classes.mainContainer}}
         direction={matchesMD ? "column" : "row"}>
           <Grid item classes={{root : classes.carouselContainer}}>
-              { typeof window !== "undefined" ? <Carousel slides={slides} goToSlide={selectedSlide} /> : null }
+              {/* { typeof window !== "undefined" ? <Carousel slides={slides} goToSlide={selectedSlide} /> : null } */}
           </Grid>
 
           <Grid item classes={{root : classes.descriptionContainer}}>

@@ -116,6 +116,8 @@ export default function Header({ categories }) {
 
   const routes = [...categories , {node : { name : 'Contact Us' , strapiId : 'contact' , link : "/contact"}}]
 
+  //console.log("Routes set for header tab : " + JSON.stringify(routes.map(route => console.log("Routes link " + route.node.link))))
+
   const tabs = (
       <Tabs value={activeIndex()} classes={{indicator : classes.coloredIndicator , root : classes.tabs}}>
       {routes.map(route => (
@@ -159,7 +161,7 @@ export default function Header({ categories }) {
     <AppBar color="transparent" elevation={0} position="static">
       <Toolbar disableGutters>
         <Button component={Link} to="/" classes={{root : classes.logoContainer}}>
-          <Typography variant="h1" classes={{root : classes.logo}}><span className={classes.logoText}>SNIPER</span> X</Typography>
+          <Typography variant="h1" classes={{root : classes.logo}}><span className={classes.logoText}>STYLE</span> SENSED</Typography>
         </Button>
 
         {matchesMD ? drawer : tabs}

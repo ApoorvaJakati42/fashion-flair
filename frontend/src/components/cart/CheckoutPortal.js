@@ -51,9 +51,9 @@ export default function CheckoutPortal ({ user }) {
     //Here below we are checking the cart for any subscription
     const { cart } = useContext(CartContext)
     const hasSubscriptionCart = cart.some(item => item.subscription)
-    console.log("25" + JSON.stringify(user));
-    console.log("25 a " + JSON.stringify(user.subscriptions));
-    console.log("25 b " + JSON.stringify(user.subscriptions.length));
+    // console.log("25" + JSON.stringify(user));
+    // console.log("25 a " + JSON.stringify(user.subscriptions));
+    // console.log("25 b " + JSON.stringify(user.subscriptions.length));
     const hasSubscriptionActive = user.subscriptions?.length > 0 
 
     const matchesMD = useMediaQuery(theme => theme.breakpoints.down("md"))
