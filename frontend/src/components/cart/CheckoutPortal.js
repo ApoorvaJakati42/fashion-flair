@@ -47,7 +47,7 @@ const stripePromise = loadStripe(process.env.GATSBY_STRIPE_PK)
 
 export default function CheckoutPortal ({ user }) {
     const classes = useStyles();
-    
+    //Checking for github repository
     //Here below we are checking the cart for any subscription
     const { cart } = useContext(CartContext)
     const hasSubscriptionCart = cart.some(item => item.subscription)
